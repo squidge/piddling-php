@@ -28,7 +28,8 @@
         "classmap": [
         ],
         "psr-4": {
-            "Piddling\\": "src/Piddling"
+            "Piddling\\": "src/Piddling",
+            "Framework\\": "src/Framework"
         }
     }
 }

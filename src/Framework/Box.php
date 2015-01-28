@@ -1,6 +1,6 @@
 <?php
 
-namespace Piddling;
+namespace Framework;
 
 class Box
 {
