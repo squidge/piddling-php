@@ -11,3 +11,4 @@ Thumbs.db
 tests/_output/*
 /node_modules/
 /.sass-cache/
+coverage.xml
