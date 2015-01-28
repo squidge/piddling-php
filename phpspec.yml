@@ -1,6 +1,11 @@
 suites:
-  piddling_suite:
+  piddling_domain:
     namespace: Piddling
+    src_path: src
+    spec_path: tests
+    spec_prefix: spec
+  piddling_framework:
+    namespace: Framework
     src_path: src
     spec_path: tests
     spec_prefix: spec
