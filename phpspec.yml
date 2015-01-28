@@ -4,3 +4,9 @@ suites:
     src_path: src
     spec_path: tests
     spec_prefix: spec
+extensions:
+    - PhpSpec\Extension\CodeCoverageExtension
+
+code_coverage:
+  format: clover
+  output: coverage.xml

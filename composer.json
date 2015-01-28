@@ -14,7 +14,8 @@
         "behat/mink-goutte-driver": "*",
         "guzzle/guzzle": "3.9.*@dev",
         "guzzlehttp/guzzle": "5.1.0",
-        "satooshi/php-coveralls": "0.7.*@dev"
+        "satooshi/php-coveralls": "0.7.*@dev",
+        "henrikbjorn/phpspec-code-coverage": "~0.2"
     },
     "license": "MIT",
     "authors": [
