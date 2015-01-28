@@ -12,8 +12,13 @@ class BoxSpec extends ObjectBehavior
         $this->shouldHaveType('Framework\Box');
     }
 
-    public function it_can_say_hello_world()
+    public function it_can_start_application()
     {
-        $this->hello()->shouldReturn('Hello, World!');
+        $this->startApplication()->shouldReturn(true);
+    }
+
+    public function it_can_check_for_global_exceptions()
+    {
+        $this->catchGlobalExceptions(new \Exception)->shouldReturn(true);
     }
 }

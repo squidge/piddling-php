@@ -1,12 +1,16 @@
-<?php
+<?php namespace Framework;
 
-namespace Framework;
+use Exception;
 
 class Box
 {
-
-    public function hello()
+    public function startApplication()
     {
-        return 'Hello, World!';
+        return true;
+    }
+
+    public function catchGlobalExceptions(Exception $e)
+    {
+        return true;
     }
 }
