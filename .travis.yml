@@ -13,5 +13,5 @@ script:
   - php vendor/bin/behat --config behat.yml
 
 after_script:
-  - php vendor/bin/coveralls
+  - php vendor/bin/coveralls -v
 

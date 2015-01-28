@@ -1,6 +1,7 @@
 .idea/
 /bootstrap/compiled.php
 /vendor
+/coverage
 composer.phar
 composer.lock
 .env.*.php
