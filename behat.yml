@@ -1,0 +1,10 @@
+default:
+  context:
+    parameters:
+      base_url: http://piddling.app
+  paths:
+    features: tests/behat
+  extensions:
+    Behat\MinkExtension\Extension:
+      goutte: ~
+      base_url: http://piddling.app
