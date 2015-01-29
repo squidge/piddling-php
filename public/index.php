@@ -12,6 +12,16 @@ require __DIR__ . '/../vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
+| Inversion of Control (IoC) Container
+|--------------------------------------------------------------------------
+|
+| Create an IoC container ready to be injected into the sandbox.
+|
+*/
+$container = new \League\Container\Container;
+
+/*
+|--------------------------------------------------------------------------
 | Create a Box
 |--------------------------------------------------------------------------
 |
@@ -19,7 +29,7 @@ require __DIR__ . '/../vendor/autoload.php';
 | of those right away.
 |
 */
-$box = new \Framework\Core\Box;
+$box = new \Framework\Core\Box($container);
 
 /*
 |--------------------------------------------------------------------------
