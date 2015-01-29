@@ -6,7 +6,7 @@ class Box
 {
     public function startApplication()
     {
-        echo "Vroom! ...";
+        echo "piddling php - pathetically trivial; trifling";
 
         // call each aspect of the framework
 
