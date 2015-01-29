@@ -2,4 +2,8 @@
 
 class Routing
 {
+    public function greeting()
+    {
+        return "Hai!";
+    }
 }

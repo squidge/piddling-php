@@ -11,4 +11,9 @@ class RoutingSpec extends ObjectBehavior
     {
         $this->shouldHaveType('Framework\Core\Routing');
     }
+
+    public function it_should_say_hello()
+    {
+        $this->greeting()->shouldReturn('Hai!');
+    }
 }
