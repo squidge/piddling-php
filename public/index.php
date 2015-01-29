@@ -19,7 +19,7 @@ require __DIR__ . '/../vendor/autoload.php';
 | of those right away.
 |
 */
-$box = new \Framework\Box;
+$box = new \Framework\Core\Box;
 
 /*
 |--------------------------------------------------------------------------
