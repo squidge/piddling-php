@@ -1,6 +1,6 @@
 <?php
 
-namespace spec\Framework;
+namespace spec\Framework\Core;
 
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -9,7 +9,7 @@ class BoxSpec extends ObjectBehavior
 {
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Framework\Box');
+        $this->shouldHaveType('Framework\Core\Box');
     }
 
     public function it_can_start_application()
