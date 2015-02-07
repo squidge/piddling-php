@@ -18,18 +18,7 @@ require __DIR__ . '/../vendor/autoload.php';
 | Create an IoC container ready to be injected into the sandbox.
 |
 */
-$container = new \League\Container\Container;
-
-/*
-|--------------------------------------------------------------------------
-| Create a Box
-|--------------------------------------------------------------------------
-|
-| Everything in Piddle run within a sandbox environment, let's create one
-| of those right away.
-|
-*/
-$box = new \Framework\Core\Box($container);
+$app = new \Framework\Core\Application;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,7 +29,7 @@ $box = new \Framework\Core\Box($container);
 |
 */
 try {
-    $box->startApplication();
+    $app->startApplication();
 } catch (Exception $exception) {
-    $box->catchGlobalExceptions($exception);
+    $app->catchGlobalExceptions($exception);
 }
