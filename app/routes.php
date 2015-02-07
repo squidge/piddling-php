@@ -5,4 +5,6 @@
 | Application Routes
 |--------------------------------------------------------------------------
 */
-$router->addRoute('GET', '/one', 'Piddling\Controllers\HomeController@method1');
+$this->router->respond('GET', '/', function () {
+    return 'piddling php - pathetically trivial; trifling';
+});
