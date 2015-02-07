@@ -18,7 +18,7 @@ require __DIR__ . '/../vendor/autoload.php';
 | Create an IoC container ready to be injected into the sandbox.
 |
 */
-$app = new \Framework\Core\Application;
+$app = new \Framework\Core\Application(new \Klein\Klein);
 
 /*
 |--------------------------------------------------------------------------
