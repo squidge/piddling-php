@@ -8,14 +8,9 @@ use Prophecy\Argument;
 
 class BoxSpec extends ObjectBehavior
 {
-    public function let(Container $c)
-    {
-        $this->beConstructedWith($c);
-    }
-
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Framework\Core\Box');
+        $this->shouldHaveType('Framework\Core\Application');
     }
 
     public function it_can_start_application()

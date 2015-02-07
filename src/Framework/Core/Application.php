@@ -1,20 +1,10 @@
 <?php namespace Framework\Core;
 
 use Exception;
-use League\Container\Container;
+use Pimple\Container;
 
-class Box
+class Application extends Container
 {
-    /**
-     * @var Container
-     */
-    public static $app;
-
-    public function __construct(Container $app)
-    {
-        static::$app = $app;
-    }
-
     public function startApplication()
     {
         echo "piddling php - pathetically trivial; trifling";
