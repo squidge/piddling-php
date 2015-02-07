@@ -26,7 +26,7 @@ class Application extends Container
      */
     public function startApplication()
     {
-        require __DIR__ . '/../../Framework/routes.php';
+        require __DIR__ . '/../../../app/routes.php';
 
         $this->router->dispatch();
         return true;
