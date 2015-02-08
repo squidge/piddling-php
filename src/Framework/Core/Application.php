@@ -1,23 +1,11 @@
 <?php namespace Framework\Core;
 
 use Exception;
-use Klein\Klein;
 use Pimple\Container;
 
 class Application extends Container
 {
-    /**
-     * @var Klein
-     */
     protected $router;
-
-    /**
-     * @param Klein $router
-     */
-    public function __construct(Klein $router)
-    {
-        $this->router = $router;
-    }
 
     /**
      * Start Application
@@ -26,6 +14,8 @@ class Application extends Container
      */
     public function startApplication()
     {
+        $this->router = $this['router'];
+
         require __DIR__ . '/../../../app/routes.php';
 
         $this->router->dispatch();
