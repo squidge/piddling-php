@@ -5,6 +5,8 @@ use Pimple\Container;
 
 class Application extends Container
 {
+    use ApplicationHelper;
+
     protected $router;
 
     /**
