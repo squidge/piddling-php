@@ -30,6 +30,7 @@ $app['router'] = function($container) {
 |--------------------------------------------------------------------------
 */
 $app['config'] = [
-    'database'  => require __DIR__  . '/../app/config/database.php',
-    'mail'      => require __DIR__  . '/../app/config/mail.php'
+    'database'  => require __DIR__ . '/../app/config/database.php',
+    'mail'      => require __DIR__ . '/../app/config/mail.php',
+    'paths'     => require __DIR__ . '/../app/config/paths.php'
 ];
