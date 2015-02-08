@@ -2,24 +2,20 @@
 
 namespace spec\Framework\Core;
 
-use League\Container\Container;
+use Klein\Klein;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
-class BoxSpec extends ObjectBehavior
+class ApplicationSpec extends ObjectBehavior
 {
-    public function it_is_initializable()
+    function it_is_initializable()
     {
         $this->shouldHaveType('Framework\Core\Application');
     }
 
-    public function it_can_start_application()
+    function it_can_start_application()
     {
+        $this['router'] = new Klein;
         $this->startApplication()->shouldReturn(true);
-    }
-
-    public function it_can_check_for_global_exceptions(Container $c)
-    {
-        $this->catchGlobalExceptions(new \Exception)->shouldReturn(true);
     }
 }
