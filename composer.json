@@ -2,8 +2,9 @@
     "name": "bagwaa/piddling-php",
     "description": "A teeny weeny PHP framework based on popular composer packages.",
     "require": {
-        "pimple/pimple": "3.0.0",
-        "klein/klein": "2.1.0",
+        "illuminate/container": "~5.0",
+        "illuminate/events": "~5.0",
+        "illuminate/routing": "~5.0",
         "vlucas/phpdotenv": "~1.1"
     },
     "require-dev": {
