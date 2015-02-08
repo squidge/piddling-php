@@ -1,7 +1,7 @@
 <?php namespace Framework\Core;
 
 use Exception;
-use Pimple\Container;
+use Illuminate\Container\Container;
 
 class Application extends Container
 {
