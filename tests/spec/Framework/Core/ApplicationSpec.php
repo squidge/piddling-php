@@ -18,4 +18,10 @@ class ApplicationSpec extends ObjectBehavior
         $this['router'] = new Klein;
         $this->startApplication()->shouldReturn(true);
     }
+
+    function it_can_check_for_global_exceptions()
+    {
+        $this->catchGlobalExceptions(new \Exception)->shouldReturn(true);
+    }
 }
+
