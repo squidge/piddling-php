@@ -1,4 +1,5 @@
-# Piddling PHP (framework for educational purposes)
+# Piddling PHP
+#### framework for educational purposes
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Build Status](https://travis-ci.org/bagwaa/piddling-php.svg?branch=develop)](https://travis-ci.org/bagwaa/piddling-php)
