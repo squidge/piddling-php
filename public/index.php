@@ -12,13 +12,36 @@ require __DIR__ . '/../vendor/autoload.php';
 
 /*
 |--------------------------------------------------------------------------
-| Inversion of Control (IoC) Container
+| Create an IoC Container
 |--------------------------------------------------------------------------
 |
-| Create an IoC container ready to be injected into the sandbox.
+| Create a new IoC container.
 |
 */
-$app = new \Framework\Core\Application(new \Klein\Klein);
+$app = new \Framework\Core\Application;
+
+/*
+|--------------------------------------------------------------------------
+| Load environment
+|--------------------------------------------------------------------------
+|
+| If our project contains a .env file then we should load that here, if we
+| don't have such a file then we need to make sure we skip this step.
+|
+*/
+if (file_exists(__DIR__ . '/../.env')) {
+    Dotenv::load(__DIR__ . '/../');
+}
+
+/*
+|--------------------------------------------------------------------------
+| Create Services
+|--------------------------------------------------------------------------
+|
+| Build up any services in the container.
+|
+*/
+require __DIR__ . '/../app/services.php';
 
 /*
 |--------------------------------------------------------------------------
