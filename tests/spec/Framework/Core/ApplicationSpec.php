@@ -23,5 +23,27 @@ class ApplicationSpec extends ObjectBehavior
     {
         $this->catchGlobalExceptions(new \Exception)->shouldReturn(true);
     }
+
+    function it_can_fetch_database_configuration()
+    {
+        $this['config'] = [
+            'database' => [
+                'default' => 'mysql'
+            ]
+        ];
+
+        $this->database()->shouldReturn(['default' => 'mysql']);
+    }
+
+    function it_can_fetch_mail_configuration()
+    {
+        $this['config'] = [
+            'mail' => [
+                'driver' => 'smtp'
+            ]
+        ];
+
+        $this->mail()->shouldReturn(['driver' => 'smtp']);
+    }
 }
 
