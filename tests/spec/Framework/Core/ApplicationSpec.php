@@ -2,7 +2,8 @@
 
 namespace spec\Framework\Core;
 
-use Klein\Klein;
+use Illuminate\Events\Dispatcher;
+use Illuminate\Routing\Router;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 
@@ -15,7 +16,8 @@ class ApplicationSpec extends ObjectBehavior
 
     function it_can_start_application()
     {
-        $this['router'] = new Klein;
+        $dispatcher = new Dispatcher;
+        $this['router'] = new Router($dispatcher);
         $this->startApplication()->shouldReturn(true);
     }
 

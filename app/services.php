@@ -1,6 +1,16 @@
 <?php
 
-use Klein\Klein;
+/*
+|--------------------------------------------------------------------------
+| Add an event dispatcher to the container
+|--------------------------------------------------------------------------
+|
+| Create an instance of the event dispatcher in the container.
+|
+*/
+$app['dispatcher'] = function ($container) {
+    return new \Illuminate\Events\Dispatcher;
+};
 
 /*
 |--------------------------------------------------------------------------
@@ -11,7 +21,7 @@ use Klein\Klein;
 |
 */
 $app['router'] = function($container) {
-    return new Klein;
+    return new \Illuminate\Routing\Router($container['dispatcher']);
 };
 
 /*

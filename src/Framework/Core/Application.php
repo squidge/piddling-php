@@ -2,6 +2,7 @@
 
 use Exception;
 use Illuminate\Container\Container;
+use Illuminate\Http\Request;
 
 class Application extends Container
 {
@@ -20,7 +21,10 @@ class Application extends Container
 
         require __DIR__ . '/../../../app/routes.php';
 
-        $this->router->dispatch();
+        $request = Request::createFromGlobals();
+        $response = $this->router->dispatch($request);
+        $response->send();
+
         return true;
     }
 
