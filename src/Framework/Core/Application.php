@@ -19,6 +19,8 @@ class Application extends Container
     {
         $this->router = $this['router'];
 
+        $this->controllers($this['config']['paths']['controllers']);
+
         require __DIR__ . '/../../../app/routes.php';
 
         $request = Request::createFromGlobals();
@@ -37,5 +39,14 @@ class Application extends Container
     public function catchGlobalExceptions(Exception $e)
     {
         return true;
+    }
+
+    public function controllers($path)
+    {
+        $project_root = $_SERVER['DOCUMENT_ROOT'] . '/../';
+
+        foreach (glob( $project_root . $path . '/' . '*Controller.php') as $controller) {
+            include_once $controller;
+        }
     }
 }

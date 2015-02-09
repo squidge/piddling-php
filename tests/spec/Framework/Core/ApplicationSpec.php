@@ -14,13 +14,6 @@ class ApplicationSpec extends ObjectBehavior
         $this->shouldHaveType('Framework\Core\Application');
     }
 
-    function it_can_start_application()
-    {
-        $dispatcher = new Dispatcher;
-        $this['router'] = new Router($dispatcher);
-        $this->startApplication()->shouldReturn(true);
-    }
-
     function it_can_check_for_global_exceptions()
     {
         $this->catchGlobalExceptions(new \Exception)->shouldReturn(true);
