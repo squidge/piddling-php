@@ -36,6 +36,7 @@ class Application extends Container
      */
     public function catchGlobalExceptions(Exception $e)
     {
-        return true;
+        throw $e;
+        //return true;
     }
 }

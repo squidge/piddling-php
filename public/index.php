@@ -20,6 +20,19 @@ require __DIR__ . '/../vendor/autoload.php';
 */
 $app = new \Framework\Core\Application;
 
+
+
+// Try to create an instance of Blade and bind it for injection
+// Ideally this should go in Framework\Core\Application.php
+// but doesn't seem to work there either
+$viewsPath = __DIR__ . '/../resources/views/';
+$cachePath = __DIR__ . '/../resources/cache/';
+$renderer = new \Windwalker\Renderer\BladeRenderer($viewsPath, array('cache_path' => $cachePath));
+$app->bind('Windwalker\Renderer\BladeRenderer', $renderer);
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Load environment
